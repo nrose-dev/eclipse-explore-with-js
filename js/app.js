@@ -84,7 +84,7 @@ gameScene.create = function () {
     console.log("Moon Angle: ", angle);
     if (angle < 50 && angle > 40) {
       msg = "Full Moon Eclipse"
-    }else{
+    } else {
       msg = "No Moon Eclipse"
     }
     // Show the dialog
@@ -94,8 +94,8 @@ gameScene.create = function () {
 function showDialog(scene, msg) {
   // Create a background for the message
   const dialogBackground = scene.add.graphics();
-  dialogBackground.fillStyle(0x33333, 0.9); // Gray with 80% opacity
-  dialogBackground.fillRect(300, 200, 600, 300);
+  dialogBackground.fillRoundedRect(425, 200, 350, 300, 40);
+  dialogBackground.fillStyle(0x33333, 0.9); // Gray with 80% opacity 
 
   // Create a message
   const messageText = scene.add.text(600, 300, msg, {
